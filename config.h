@@ -65,7 +65,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -153,7 +153,7 @@ static Key keys[] = {
 	{ MODKEY,			XF86XK_AudioLowerVolume,	spawn,	SHCMD("amixer sset Headphone 5%-") },
 
 	/* Spawn some nice programs */
-	{ 0,				XK_w,				spawn,	SHCMD("chromium") },
+	{ MODKEY,			XK_w,				spawn,	SHCMD("chromium") },
 	{ 0,				XK_F1,				spawn,	SHCMD("ytfzf -Dl") },
 	{ MODKEY,			XK_n,				spawn,	SHCMD("st -e ncmpcpp") },
 	{ MODKEY,			XK_N,				spawn,	SHCMD("st -e newsboat") },

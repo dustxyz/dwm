@@ -73,7 +73,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
+rtatir const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 
@@ -152,6 +152,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_n,				spawn,	SHCMD("st -e ncmpcpp") },
 	{ MODKEY,			XK_N,				spawn,	SHCMD("st -e newsboat") },
 	{ MODKEY,			XK_F4,				spawn,	SHCMD("waldl") },
+	{ MODKEY,			XK_F2,				spawn,	SHCMD("st -e pulsemixer") },
 };
 
 /* button definitions */

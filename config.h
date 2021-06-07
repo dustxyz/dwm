@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int snap      = 30;       /* snap pixel */
 static const unsigned int gappih    = 20;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
 static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
@@ -80,10 +80,12 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
+
+#include <X11/XF86keysym.h>
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -91,7 +93,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_Return, zoom,           {0} },
+	{ MODKEY,                       XK_Z,      zoom,           {0} },
 	{ MODKEY|Mod4Mask,              XK_u,      incrgaps,       {.i = +1 } },
 	{ MODKEY|Mod4Mask|ShiftMask,    XK_u,      incrgaps,       {.i = -1 } },
 	{ MODKEY|Mod4Mask,              XK_i,      incrigaps,      {.i = +1 } },
@@ -117,7 +119,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Right,  moveresize,     {.v = "0x 0y 25w 0h" } },
 	{ MODKEY|ShiftMask,             XK_Left,   moveresize,     {.v = "0x 0y -25w 0h" } },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
@@ -141,6 +143,21 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+
+	/* Personal Config */
+
+	{ 0,				XF86XK_AudioRaiseVolume,	spawn,	SHCMD("amixer sset Master 5%+") },
+	{ 0,				XF86XK_AudioLowerVolume,	spawn,	SHCMD("amixer sset Master 5%-") },
+	{ 0,				XF86XK_AudioMute,	        spawn,	SHCMD("amixer sset Master toggle") },
+	{ MODKEY,			XF86XK_AudioRaiseVolume,	spawn,	SHCMD("amixer sset Headphone 5%") },
+	{ MODKEY,			XF86XK_AudioLowerVolume,	spawn,	SHCMD("amixer sset Headphone 5%-") },
+
+	/* Spawn some nice programs */
+	{ 0,				XK_w,				spawn,	SHCMD("chromium") },
+	{ 0,				XK_F1,				spawn,	SHCMD("ytfzf -Dl") },
+	{ MODKEY,			XK_n,				spawn,	SHCMD("st -e ncmpcpp") },
+	{ MODKEY,			XK_N,				spawn,	SHCMD("st -e newsboat") },
+	{ MODKEY,			XK_F4,				spawn,	SHCMD("waldl") },
 };
 
 /* button definitions */

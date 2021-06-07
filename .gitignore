@@ -1,6 +1,7 @@
 *.orig
 *.rej
 patches/
+*.def.h
 util.o
 dwm
 dwm.o

@@ -152,7 +152,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_w,				spawn,	SHCMD("chromium") },
 	{ 0,				XK_F1,				spawn,	SHCMD("ytfzf -Dl") },
 	{ MODKEY,			XK_n,				spawn,	SHCMD("st -e ncmpcpp") },
-	{ MODKEY,			XK_l,				spawn,	SHCMD("st -e newsboat") },
+	{ MODKEY,			XK_v,				spawn,	SHCMD("st -e newsboat") },
 	{ MODKEY,			XK_F4,				spawn,	SHCMD("waldl") },
 	{ MODKEY,			XK_F2,				spawn,	SHCMD("st -e pulsemixer") },
 };

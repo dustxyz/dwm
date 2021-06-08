@@ -10,8 +10,8 @@ static const unsigned int gappov    = 10;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "UbuntuMono Nerd Font:size=12:weight=bold:antialias=true:autohint:true" };
-static const char dmenufont[]       = "UbuntuMono Nerd Font:size=12:antialias=true:autohint=true";
+static const char *fonts[]          = { "JetbrainsMono Nerd Font:size=11:weight=bold:antialias=true:autohint:true", "JoyPixels:pixelsize=11:antialias=true:autohint=true" };
+static const char dmenufont[]       = "JetbrainsMono Nerd Font:size=11:antialias=true:autohint=true";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
@@ -25,7 +25,7 @@ static char *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = {  " ", " ", " ", " ", " " };
+static const char *tags[] = {  "1", "2", "3", "4", "5" };
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   isterminal noswallow monitor */

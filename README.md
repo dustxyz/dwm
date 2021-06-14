@@ -1,6 +1,6 @@
 # NotReallyDust Build of DWM
 
-Here is my fork of DWM it has:
+Patches:
 
 - Swallow patch
 - Xrdb patch
@@ -8,13 +8,13 @@ Here is my fork of DWM it has:
 - Vanity gaps (gaps with Fibonacci too)
 - Fibonacci patch
 - Move Resize patch
-
-
-It can be usable for now. (It still in WIP)
+- NoTitle patch
 
 Another useful links:
 
-My Build of ST https://github.com/dustxyz/st
+[My Build of ST](https://github.com/dustxyz/st)
+[ytfzf](https://github.com/pystardust/ytfzf)
+[Status Bar](https://github.com/pystardust/sbar)
 
 
 

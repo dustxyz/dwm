@@ -2,13 +2,14 @@
 
 Patches:
 
-- Swallow patch
-- Xrdb patch
-- Sticky patch
+- Swallow 
+- Xrdb 
+- Sticky 
 - Vanity gaps (gaps with Fibonacci too)
-- Fibonacci patch
-- Move Resize patch
-- NoTitle patch
+- Fibonacci 
+- Move Resize 
+- NoTitle
+- Hide Vacant 
 
 Another useful links:
 

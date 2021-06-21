@@ -14,9 +14,9 @@ static const char *fonts[]          = { "JetbrainsMono Nerd Font:size=11:weight=
 static const char dmenufont[]       = "JetbrainsMono Nerd Font:size=11:antialias=true:autohint=true";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
-static char normfgcolor[]           = "#bbbbbb";
+static char normfgcolor[]           = "#ebdbb2";
 static char selfgcolor[]            = "#eeeeee";
-static char selbordercolor[]        = "#282828";
+static char selbordercolor[]        = "#8dc07c";
 static char selbgcolor[]            = "#79740e";
 static char *colors[][3] = {
        /*               fg           bg           border   */

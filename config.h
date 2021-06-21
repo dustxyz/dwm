@@ -157,7 +157,6 @@ static Key keys[] = {
 	{ MODKEY,			XK_F2,				spawn,	SHCMD("st -e pulsemixer") },
 	{ 0,				XK_Print,			spawn,	SHCMD("maim | xclip -selection clipboard -t image/png") },
 	{ MODKEY,			XK_Print,			spawn,	SHCMD("maim -s | xclip -selection clipboard -t image/png") },
-	{ Mod1Mask,			XK_Print,			spawn,	SHCMD("maim -i ; xdotool getactivewindow | xclip -selection clipboard -t image/png") },
 };
 
 /* button definitions */

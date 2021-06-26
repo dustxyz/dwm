@@ -157,7 +157,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_F2,				spawn,	SHCMD("st -e pulsemixer") },
 	{ 0,				XK_Print,			spawn,	SHCMD("maim | xclip -selection clipboard -t image/png") },
 	{ MODKEY,			XK_Print,			spawn,	SHCMD("maim -s | xclip -selection clipboard -t image/png") },
-	{ MODKEY|ShiftMask, 		XK_F, 				spawn,  SHCMD("kotatogram-desktop") },
+	{ MODKEY|ShiftMask, 		XK_f, 				spawn,  SHCMD("kotatogram-desktop") },
 };
 
 /* button definitions */

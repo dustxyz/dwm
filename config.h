@@ -144,12 +144,12 @@ static Key keys[] = {
 
 	/* Personal Config */
 
-	{ 0,				XF86XK_AudioRaiseVolume,	spawn,	SHCMD("pamixer --allow-boost -i 5") },
-	{ 0,				XF86XK_AudioLowerVolume,	spawn,	SHCMD("pamixer --allow-boost -d 5") },
-	{ 0,				XF86XK_AudioMute,	        spawn,	SHCMD("pamixer -t") },
+	{ 0,				XF86XK_AudioRaiseVolume,	spawn,	SHCMD("amixer sset Master 5%+") },
+	{ 0,				XF86XK_AudioLowerVolume,	spawn,	SHCMD("amixer sset Master 5%-") },
+	{ 0,				XF86XK_AudioMute,	        spawn,	SHCMD("amixer sset Master toggle") },
 
 	/* Spawn some nice programs */
-	{ MODKEY,			XK_w,				spawn,	SHCMD("chromium") },
+	{ MODKEY,			XK_w,				spawn,	SHCMD("icecat") },
 	{ 0,				XK_F1,				spawn,	SHCMD("ytfzf -Dl") },
 	{ MODKEY,			XK_n,				spawn,	SHCMD("st -e ncmpcpp") },
 	{ MODKEY,			XK_v,				spawn,	SHCMD("st -e newsboat") },
@@ -157,7 +157,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_F2,				spawn,	SHCMD("st -e pulsemixer") },
 	{ 0,				XK_Print,			spawn,	SHCMD("maim | xclip -selection clipboard -t image/png") },
 	{ MODKEY,			XK_Print,			spawn,	SHCMD("maim -s | xclip -selection clipboard -t image/png") },
-	{ MODKEY|ShiftMask, 		XK_f, 				spawn,  SHCMD("kotatogram-desktop") },
+	{ MODKEY|ShiftMask, 		XK_f, 				spawn,  SHCMD("telegram-desktop") },
 };
 
 /* button definitions */

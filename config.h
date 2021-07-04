@@ -144,9 +144,9 @@ static Key keys[] = {
 
 	/* Personal Config */
 
-	{ 0,				XF86XK_AudioRaiseVolume,	spawn,	SHCMD("amixer sset Master 5%+") },
-	{ 0,				XF86XK_AudioLowerVolume,	spawn,	SHCMD("amixer sset Master 5%-") },
-	{ 0,				XF86XK_AudioMute,	        spawn,	SHCMD("amixer sset Master toggle") },
+	{ 0,				XF86XK_AudioRaiseVolume,	spawn,	SHCMD("pamixer -i 5") },
+	{ 0,				XF86XK_AudioLowerVolume,	spawn,	SHCMD("pamixer -d 5") },
+	{ 0,				XF86XK_AudioMute,	        spawn,	SHCMD("pamixer -t") },
 
 	/* Spawn some nice programs */
 	{ MODKEY,			XK_w,				spawn,	SHCMD("icecat") },
